@@ -100,5 +100,5 @@ class Antithetic:
                          (self.rho + (self.degrade_p * x1_ss * self.rho) / (t - self.degrade_p * x1_ss)) ** 2 \
                          - t * self.rho * self.eta * self.k * self.theta2
         theta_initial_guess = init
-        upper_stable = fsolve(func, theta_initial_guess)
-        return upper_stable
+        stable = fsolve(func, theta_initial_guess)
+        return stable
